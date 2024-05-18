@@ -1,9 +1,10 @@
-import './App.css';
+import "./App.css";
+import Charts from "./pages/Charts";
 
 function App() {
   return (
     <div className="App">
-      <h1>hii</h1>
+      <Charts/>
     </div>
   );
 }
