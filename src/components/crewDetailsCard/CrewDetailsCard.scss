@@ -1,11 +1,19 @@
 @import "../../styles/_variables.scss";
 
 .crew-details-wrapper {
-    .crew-icon-wrapper {
-        width: 150px;
-        height: 150px;
-    }
-    .card-title, .crew-details-wrapper .crew-name {
-        color: $grey;
-    }
+  position: relative;
+  .crew-icon-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+  .card-title,
+  .crew-details-wrapper .crew-name {
+    color: $grey;
+  }
+  .chat {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(100%, -70%);
+  }
 }

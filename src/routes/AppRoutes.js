@@ -9,7 +9,7 @@ const AppRoutes = () => {
     const router = createBrowserRouter(
         createRoutesFromElements(
             <Route>
-                <Route path={ROUTE_CONSTANTS.HOME} element={<Home/>}/>
+                <Route exact path={ROUTE_CONSTANTS.HOME} element={<Home/>}/>
                 <Route path={ROUTE_CONSTANTS.CREW_PAGE} element={<CrewInitializationPage />} />
                 <Route path='*' element={<ErrorPage />} />
             </Route>
