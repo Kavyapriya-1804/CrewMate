@@ -1,12 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./styles/globals.scss";
-import CrewInitializationPage from './pages/crewInitializationPage/CrewInitializationPage';
+import React from 'react';
+import AppRoutes from './routes/AppRoutes';
 
 function App() {
   return (
-    <div className="App">
-      <CrewInitializationPage />
-    </div>
+      <React.Fragment>
+          <div className="App">
+            <AppRoutes />
+          </div>
+      </React.Fragment>
   );
 }
 
