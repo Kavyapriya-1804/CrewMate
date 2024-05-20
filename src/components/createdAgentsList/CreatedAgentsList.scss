@@ -1,0 +1,19 @@
+@import "../../styles/_variables.scss";
+
+.created-agents-list {
+    li{
+        border-bottom: 1px solid $primary;
+        color: $primary;
+        font-size: 20px;
+        cursor: pointer;
+
+        &:last-of-type {
+            margin-bottom: 70px;
+        }
+        
+        .cancel-icon {
+            width: 30px;
+            cursor: pointer;
+        }
+    }
+}

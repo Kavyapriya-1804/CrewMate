@@ -1,0 +1,25 @@
+@import "../../styles/_variables.scss";
+
+.page-steps-indicator-wrapper {
+    .step-1, .step-2 {
+        width: 80px;
+        height: 80px;
+        border: 1px solid $primary;
+        border-radius: 50%;
+        background-color: $white;
+        color: $primary;
+        font-size: 35px;
+        cursor: pointer;
+
+        &#currentPage {
+            background-color: $primary;
+            color: $white;
+            cursor: default;
+        }
+    }
+    > .connector-line {
+        width: 45px;
+        height: 2px;
+        background-color: $primary;
+    }
+}

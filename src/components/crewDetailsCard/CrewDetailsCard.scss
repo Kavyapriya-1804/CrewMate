@@ -1,0 +1,11 @@
+@import "../../styles/_variables.scss";
+
+.crew-details-wrapper {
+    .crew-icon-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+    .card-title, .crew-details-wrapper .crew-name {
+        color: $grey;
+    }
+}

@@ -1,0 +1,19 @@
+@import "../../styles/_variables.scss";
+
+header {
+    background-color: $secondary;
+    padding: 0px 25px;
+    .brand {
+        .logo-wrapper {
+            width: 80px;
+            height: 80px;
+        }
+        .brand-name {
+            font-size: 30px;
+        }
+    }
+    .user-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+}

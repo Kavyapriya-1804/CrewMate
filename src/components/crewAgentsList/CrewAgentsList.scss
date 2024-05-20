@@ -1,0 +1,19 @@
+@import "../../styles/_variables.scss";
+
+.crew-details-wrapper {
+    ul {
+        max-height: 180px;
+        li {
+            color: $primary;
+            font-size: 18px;
+
+            .agent-icon-wrapper {
+                width: 30px;
+                height: 30px;
+            }
+            .agent-name {
+                color: $grey;
+            }
+        }
+    }
+}

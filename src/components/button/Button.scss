@@ -1,0 +1,19 @@
+@import "../../styles/_variables.scss";
+
+button {
+    border: 0px;
+    cursor: pointer;
+    &:disabled {
+        cursor: not-allowed;
+    }
+}
+
+button.primary {
+    background-color: $primary;
+    color: $white;
+}
+
+button.primary-reverse {
+    background-color: $white;
+    color: $primary;
+}

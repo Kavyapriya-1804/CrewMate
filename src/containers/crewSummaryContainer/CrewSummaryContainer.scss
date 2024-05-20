@@ -1,0 +1,36 @@
+@import "../../styles/_variables.scss";
+
+.page-content {
+    .crew-name-form {
+        label {
+            color: $primary;
+        }
+        input {
+            outline: 0px;
+            border: 1px solid $secondary;
+            color: $secondary;
+            min-height: 40px;
+        }
+        .crew-name-btn {
+            height: 40px;
+        }
+    }
+}
+
+footer {
+    .prev-step-btn-wrapper {
+        width: 60px;
+        height: 60px;
+        background-color: $primary;
+        border-radius: 50%;
+        .prev-step {
+            transform: rotateY(180deg);
+        }
+    }
+
+    .kickoff-crew-btn-wrapper {
+        width: 80px;
+        height: 80px;
+        background-color: $white;
+    }
+}

@@ -1,0 +1,31 @@
+@import "../../styles/_variables.scss";
+
+.page-content {
+    .create-agent-form {
+        label {
+            color: $primary;
+        }
+        input, textarea {
+            outline: 0px;
+            border: 1px solid $secondary;
+            color: $secondary;
+            min-height: 40px;
+        }
+        textarea {
+            resize: none;
+            min-height: 100px;
+        }
+        .create-agent-btn {
+            height: 40px;
+        }
+    }
+}
+
+footer {
+    .next-step-btn-wrapper {
+        width: 60px;
+        height: 60px;
+        background-color: $primary;
+        border-radius: 50%;
+    }
+}

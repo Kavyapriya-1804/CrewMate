@@ -1,0 +1,19 @@
+@import "../../styles/_variables.scss";
+
+.created-agents-wrapper {
+    border: 1px solid $primary;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    .created-agents-title {
+        background-color: $primary;
+        color: $white;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .empty-list-fallback-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+}
