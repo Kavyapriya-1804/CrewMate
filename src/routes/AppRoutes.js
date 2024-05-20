@@ -6,11 +6,11 @@ import ErrorPage from "../pages/errorPage/ErrorPage";
 
 const AppRoutes = () => {    
     const router = createBrowserRouter(
-    createRoutesFromElements(
-        <Route>
-            <Route path={ROUTE_CONSTANTS.CREW_PAGE} element={<CrewInitializationPage />} />
-            <Route path='*' element={<ErrorPage />} />
-        </Route>
+        createRoutesFromElements(
+            <Route>
+                <Route path={ROUTE_CONSTANTS.CREW_PAGE} element={<CrewInitializationPage />} />
+                <Route path='*' element={<ErrorPage />} />
+            </Route>
         ),
     );
 
