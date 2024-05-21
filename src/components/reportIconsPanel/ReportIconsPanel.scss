@@ -1,0 +1,12 @@
+@import "../../styles/_variables.scss";
+
+.report-icons-panel {
+    bottom: 0px;
+    transform: translateY(50%);
+
+    .report-icon-wrapper {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+}

@@ -6,14 +6,20 @@ button {
     &:disabled {
         cursor: not-allowed;
     }
-}
 
-button.primary {
-    background-color: $primary;
-    color: $white;
-}
+    &.block {
+        height: 40px;
+        width: 200px;
+    }
 
-button.primary-reverse {
-    background-color: $white;
-    color: $primary;
+    &.primary {
+        background-color: $primary;
+        color: $white;
+    }
+    
+    &.primary-reverse {
+        background-color: $white;
+        color: $primary;
+        border: 1px solid $primary;
+    }
 }

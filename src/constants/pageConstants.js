@@ -37,6 +37,32 @@ const CREW_INITIALIZATION_PAGE = {
     }
 }
 
+const CREW_INTERACTION_PAGE = {
+    pageTitle : "Crew Name",
+    buttons : {
+        assignTask : {
+            label : "Assign Task"
+        },
+        kickoff : {
+            label : "Kickoff",
+            link : ""
+        }
+    },
+    ROLES : {
+        user : {
+            name : "user",
+            className : "user"
+        },
+        crewMate : {
+            name: "crewMate",
+            className : "crew-mate"
+        }
+    },
+    noInteractionsYetContainer : {
+        message : "Assign Tasks to Kickoff the crew"
+    }
+}
+
 const ERROR_PAGE = {
     message : {
         primary : "OOPS ! Wrong Route :(",
@@ -51,5 +77,6 @@ const ERROR_PAGE = {
 export const PAGE_CONSTANTS= {
     LOGO : LOGO,
     CREW_INITIALIZATION_PAGE : CREW_INITIALIZATION_PAGE,
+    CREW_INTERACTION_PAGE : CREW_INTERACTION_PAGE,
     ERROR_PAGE : ERROR_PAGE
 }

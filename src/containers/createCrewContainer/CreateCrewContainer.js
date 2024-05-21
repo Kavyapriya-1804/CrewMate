@@ -75,7 +75,7 @@ const CreateCrewContainer = ({agents, addAgent, setAgents, deleteAgent, setCurre
 
     return (
         <>
-            <section className="page-content d-flex">
+            <section className="page-content create-crew-container d-flex">
                 <div className="create-agent-form-wrapper col-6 d-flex justify-content-center align-items-center">
                     <form className="create-agent-form col-10" onSubmit={handleAddAgent}>
                         <div className="agent-name-wrapper d-flex flex-column mb-3">
@@ -95,7 +95,7 @@ const CreateCrewContainer = ({agents, addAgent, setAgents, deleteAgent, setCurre
                             <textarea name="agent_backstory" value={formData.agent_backstory} onChange={handleChange} required></textarea>
                         </div>
                         <div className="create-agent-btn-wrapper mt-5">
-                            <Button className={"create-agent-btn px-5 primary"} type={"submit"} text={"Create Agent"} isDisabled={!validateFormSubmit()}/>
+                            <Button className={"create-agent-btn primary block"} type={"submit"} text={"Create Agent"} isDisabled={!validateFormSubmit()}/>
                         </div>
                     </form>
                 </div>

@@ -1,0 +1,42 @@
+@import "../../styles/_variables.scss";
+
+.chat-bubble-wrapper {
+    &.user {
+        justify-content: end;
+
+        .profile-pic-wrapper {
+            right: 0;
+            background-color: $secondary;
+        }
+
+        .chat-bubble {
+            margin-right: 65px;
+            background-color: $secondary;
+        }
+    }
+    &.crew-mate {
+        .profile-pic-wrapper {
+            left: 0;
+            background-color: $primary;
+        }
+
+        .chat-bubble {
+            margin-left: 65px;
+            background-color: $primary;
+        }
+
+    }
+
+    .profile-pic-wrapper {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+
+        bottom: 0;
+        transform: translateY(75%);
+    }
+    .chat-bubble {
+        color: $white;
+        border-radius: 10px;
+    }
+}

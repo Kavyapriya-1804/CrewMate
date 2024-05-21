@@ -4,7 +4,9 @@ import cancel from "../../assets/icons/cancel.png";
 const Agent = ({agentName, index, handleAgentClick, handleDeleteAgent}) => (
     <li key={index} className="px-5 py-3 d-flex justify-content-between" onClick={() => handleAgentClick(index)}>
         {agentName}
-        <img className="cancel-icon" src={cancel} alt="Remove Agent" onClick={(event) => handleDeleteAgent(event, index)}/>
+        <div className="cancel-icon-wrapper" onClick={(event) => handleDeleteAgent(event, index)}>
+            <img className="cancel-icon w-100" src={cancel} alt="Remove Agent"/>
+        </div>
     </li>
 );
 
