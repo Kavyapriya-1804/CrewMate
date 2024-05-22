@@ -1,11 +1,13 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/button/Button";
 import create from "../../assets/icons/ai_create.png";
 import RootLayout from "../../layout/RootLayout";
 import "./Home.scss";
 import CrewDetailsCard from "../../components/crewDetailsCard/CrewDetailsCard";
 import { ROUTE_CONSTANTS } from "../../constants/routeConstants";
+import { useState, useEffect } from "react";
+import { getCrews } from "../../service/HomeService";
 
 var crews = [
   {
@@ -42,14 +44,23 @@ var crews = [
 
 const PageWrapper = () => {
   const navigate = useNavigate();
+  const [crew, setCrew] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const crewList = await getCrews().catch((err) => console.log(err));
+      setCrew(crewList);
+    })();
+    
+  }, []);
 
   const redirectToCreateCrew = () => {
-    navigate(ROUTE_CONSTANTS.CREW_PAGE)
+    navigate(ROUTE_CONSTANTS.CREW_PAGE);
   };
 
   const redirectToCrewInteraction = (id) => {
-    navigate(`${ROUTE_CONSTANTS.CREW_PAGE}/:${id}`)
-  }
+    navigate(`${ROUTE_CONSTANTS.CREW_PAGE}/:${id}`);
+  };
 
   return (
     <>
@@ -61,7 +72,7 @@ const PageWrapper = () => {
       </Button>
 
       <div className="crewContainer col-12 d-flex flex-wrap">
-        {crews.map((crew, index) => (
+        {crew.map((crew, index) => (
           <div
             key={index}
             className="col-4 d-flex justify-content-center mb-5 p-5 "
