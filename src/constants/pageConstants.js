@@ -50,7 +50,9 @@ const CREW_INTERACTION_PAGE = {
     },
     modal : {
         header : {
-            assignTasks : "ASSIGN TASKS"
+            assignTasks : "ASSIGN TASKS",
+            video : "VIDEO",
+            reportAnalysisChart : "REPORT ANALYSIS - CHART"
         }
     },
     ROLES : {

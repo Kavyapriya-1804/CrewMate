@@ -81,7 +81,7 @@ const AgentTasks = ({agents, crewId}) => (
     <form className="agent-task-inputs-wrapper d-flex flex-column align-items-center">
         {agents && agents.map((agent, index) => (
             <div className="d-flex flex-column col-12 mb-4" key={index}>
-                <label for="agent_task">{agent.agent_name}</label>
+                <label htmlFor="agent_task">{agent.agent_name}</label>
                 <input type="text" className="agent-task mt-3 ps-3" name="agent_task" id={agent.agent_id} required/>
             </div>
         ))}
@@ -90,18 +90,6 @@ const AgentTasks = ({agents, crewId}) => (
     </form>
 ); 
 
-const VideoReport = ({src, title="YouTube video player"}) => (
-    // <VideoReport src={"https://www.youtube.com/embed/0ah5yCEGitQ?si=MxaygfZ_jQ8Pn9bY"} title={"Analysis"} />
-    // <VideoReport src={"https://www.youtube.com/watch?v=0ah5yCEGitQ"} title={"Analysis"} />
-    <div>
-        <iframe width="100%" height="400px" 
-                src={src}
-                title={title}
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-);
 
 const CrewInteractionContainer = ({crewId}) => {
     const [modalShow, setModalShow] = React.useState(false);

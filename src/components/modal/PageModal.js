@@ -9,7 +9,7 @@ const PageModal = (props) => {
   return (
     <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
       <Modal.Header className="align-items-center justify-content-center position-relative" closeButton>
-        <Modal.Title id="contained-modal-title-vcenter" className="col-11 text-center">
+        <Modal.Title id="contained-modal-title-vcenter" className="col-11 ms-5 text-center">
             {title}
         </Modal.Title>
         <div className="cancel-icon-wrapper position-absolute">
