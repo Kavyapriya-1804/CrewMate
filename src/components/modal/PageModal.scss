@@ -1,0 +1,30 @@
+@import "../../styles/_variables.scss";
+
+.modal-header {
+    .modal-title{
+        color: $primary;
+    }
+    .btn-close {
+        opacity: 0;
+    }
+    .cancel-icon-wrapper {
+        width: 30px;
+        top: 0px;
+        right: 0px;
+        transform: translate(-30%, 62%);
+    }
+}
+.modal-body {
+    max-height: 75vh;
+    .agent-task-inputs-wrapper {
+        input.agent-task {
+            height: 45px;
+            border: 1px solid $secondary;
+            border-radius: 10px;
+            outline: 0px;
+        }
+        label {
+            color: $primary;
+        }
+    }
+}

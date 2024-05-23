@@ -11,7 +11,7 @@ const PageWrapper = () => {
             <div className="page-header mb-4">
                 <PageTitle title={CREW_INTERACTION_PAGE.pageTitle} />
             </div>
-            <CrewInteractionContainer />
+            <CrewInteractionContainer crewId={1} />
         </>
     );
 }

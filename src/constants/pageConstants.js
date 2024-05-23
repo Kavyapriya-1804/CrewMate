@@ -48,6 +48,11 @@ const CREW_INTERACTION_PAGE = {
             link : ""
         }
     },
+    modal : {
+        header : {
+            assignTasks : "ASSIGN TASKS"
+        }
+    },
     ROLES : {
         user : {
             name : "user",
