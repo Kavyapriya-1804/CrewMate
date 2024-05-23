@@ -29,6 +29,11 @@ const PageWrapper = () => {
         setAgents(agents.filter((_, index) => index !== indexToDelete));
     };
 
+    const resetState = () => {
+        setAgents([])
+        setCrewName('')
+    }
+
     return (
         <>
             <div className="page-header mb-4">
@@ -37,7 +42,7 @@ const PageWrapper = () => {
             </div>
             {currentStep === 1 ? 
                 <CreateCrewContainer agents={agents} setCurrentStep={setCurrentStep} addAgent={addAgent} setAgents={setAgents} deleteAgent={deleteAgent} /> 
-                : <CrewSummaryContainer agents={agents.map(agent => agent.agent_name)} setCurrentStep={setCurrentStep} crewName={crewName} setCrewName={setCrewName} />
+                : <CrewSummaryContainer resetState={resetState} agents={agents} setCurrentStep={setCurrentStep} crewName={crewName} setCrewName={setCrewName} />
             }
         </>
     );

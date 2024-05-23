@@ -5,7 +5,7 @@ import { CONFIGS } from '../config';
  */
 
 const ApiConstants = {
-  API_URL: CONFIGS.BASE_URL,
+  API_URL: "http://127.0.0.1:5000",
   API_HEADERS: {
     'Content-Type': 'application/json',
     Accept: 'application/json',

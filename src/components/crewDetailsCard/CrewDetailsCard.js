@@ -19,7 +19,6 @@ const CrewDetailsCard = ({
   const redirectToCrewInteraction = (id) => {
     navigate(`${ROUTE_CONSTANTS.CREW_PAGE}/${id}`);
   };
-
   return (
     <div className="crew-details-wrapper card align-items-center col-8">
       <Button
