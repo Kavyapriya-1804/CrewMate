@@ -1,55 +1,184 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/button/Button";
 import create from "../../assets/icons/ai_create.png";
 import RootLayout from "../../layout/RootLayout";
 import "./Home.scss";
 import CrewDetailsCard from "../../components/crewDetailsCard/CrewDetailsCard";
 import { ROUTE_CONSTANTS } from "../../constants/routeConstants";
+import { useState, useEffect } from "react";
+import { getCrews } from "../../service/HomeService";
 
 var crews = [
   {
     id: "1",
     name: "name",
-    agents: ["agent1", "agent1", "agent1"],
+    agents: [
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+    ],
     isReportSectionPresent: true,
   },
   {
     id: "2",
     name: "name",
-    agents: ["agent1", "agent1", "agent1"],
+    agents: [
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+    ],
     isReportSectionPresent: true,
   },
   {
     id: "3",
     name: "name",
-    agents: ["agent1", "agent1", "agent1"],
+    agents: [
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+    ],
     isReportSectionPresent: true,
   },
   {
     id: "4",
     name: "name",
-    agents: ["agent1", "agent1", "agent1"],
+    agents: [
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+    ],
     isReportSectionPresent: true,
   },
   {
     id: "5",
     name: "name",
-    agents: ["agent1", "agent1", "agent1"],
+    agents: [
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+      {
+        agent_name: "agent1",
+        agent_role: "agentrole",
+        agent_goal: "agent goal",
+        agent_backstory: "agent backstory",
+      },
+    ],
     isReportSectionPresent: true,
   },
 ];
 
 const PageWrapper = () => {
   const navigate = useNavigate();
+  const [crews, setCrews] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const crewList = await getCrews().catch((err) => console.log(err));
+      setCrews(crewList.crews);
+    })();
+  }, []);
 
   const redirectToCreateCrew = () => {
-    navigate(ROUTE_CONSTANTS.CREW_PAGE)
+    navigate(ROUTE_CONSTANTS.CREW_PAGE);
   };
 
   const redirectToCrewInteraction = (id) => {
-    navigate(`${ROUTE_CONSTANTS.CREW_PAGE}/:${id}`)
-  }
+    navigate(`${ROUTE_CONSTANTS.CREW_PAGE}/:${id}`);
+  };
 
   return (
     <>
@@ -67,10 +196,10 @@ const PageWrapper = () => {
             className="col-4 d-flex justify-content-center mb-5 p-5 "
           >
             <CrewDetailsCard
-              name={crew.name}
+              crewName={crew.crew_name}
               agents={crew.agents}
-              isReportSectionPresent={crew.isReportSectionPresent}
-              id={crew.id}
+              isReportSectionPresent = {true}
+              id={crew.crew_id}
             />
           </div>
         ))}

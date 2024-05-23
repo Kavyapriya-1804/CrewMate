@@ -10,12 +10,14 @@ const Agent = ({agentName, index}) => (
     </li>
 );
 
-const CrewAgentsList = ({agents}) => (
-    <ul className="card-text list-unstyled px-3 overflow-scroll">
-        {agents && agents.map((agentName, index) => (
-            <Agent key={index} agentName={agentName} index={index} />
-        ))}
-    </ul>
-);
+const CrewAgentsList = ({agents}) => {
+    return(
+        <ul className="card-text list-unstyled px-3 overflow-scroll">
+            {agents && agents.map((agent, index) => (
+                <Agent key={index} agentName={agent.agent_name} index={index} />
+            ))}
+        </ul>
+    );
+}
 
 export default CrewAgentsList;
