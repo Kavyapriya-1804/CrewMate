@@ -10,11 +10,11 @@ const NoInteractionsYetFallback = () => (
     </div>
 );
 
-const InteractionsContainer = ({interactions, hasFinalSummary=false}) => (
+const InteractionsContainer = ({interactions, agents, hasFinalSummary=false}) => (
     <section className="col-9">
         {(interactions && interactions.length > 0) 
             ?
-            <ChatSectionContainer interactions={interactions} hasFinalSummary={hasFinalSummary} />
+            <ChatSectionContainer interactions={interactions} agents={agents} hasFinalSummary={hasFinalSummary} />
             :
             <NoInteractionsYetFallback />
         }
