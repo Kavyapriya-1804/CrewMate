@@ -48,6 +48,13 @@ const CREW_INTERACTION_PAGE = {
             link : ""
         }
     },
+    modal : {
+        header : {
+            assignTasks : "ASSIGN TASKS",
+            video : "VIDEO",
+            reportAnalysisChart : "REPORT ANALYSIS - CHART"
+        }
+    },
     ROLES : {
         user : {
             name : "user",
