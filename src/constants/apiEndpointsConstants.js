@@ -1,3 +1,4 @@
 export const apiEndPoints = {
-    CREW: '/crew'
+    CREW: '/crew',
+    TASK: '/task'
 }

@@ -41,7 +41,7 @@ const CrewSummaryContainer = ({agents, setCurrentStep, crewName, setCrewName, re
     }
 
     const redirectToCrewInteractionPage = (crewData) => {
-        navigate(`${ROUTE_CONSTANTS.CREW_PAGE}/${crewData.crew_id}`)
+        navigate(`${ROUTE_CONSTANTS.CREW_PAGE}/${crewData.crew_id}`, {state : { crewName: crewName}})
     }
 
     return (

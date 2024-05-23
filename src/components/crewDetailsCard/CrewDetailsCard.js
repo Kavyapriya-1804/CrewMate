@@ -16,14 +16,22 @@ const CrewDetailsCard = ({
 }) => {
   const navigate = useNavigate();
 
-  const redirectToCrewInteraction = (id) => {
-    navigate(`${ROUTE_CONSTANTS.CREW_PAGE}/${id}`);
+  const redirectToCrewInteraction = (id, crewName, agents) => {
+    const crewInteractionObj = {
+      crewName: crewName,
+      agents: agents,
+      id: id,
+    };
+    console.log(crewInteractionObj);
+    navigate(`${ROUTE_CONSTANTS.CREW_PAGE}/${id}`, {
+      state: crewInteractionObj,
+    });
   };
   return (
     <div className="crew-details-wrapper card align-items-center col-8">
       <Button
         className={"next-step-btn-wrapper p-2 mx-3 mt-3 chat"}
-        onClick={() => redirectToCrewInteraction(id)}
+        onClick={() => redirectToCrewInteraction(id, crewName, agents)}
       >
         <img src={chat} alt="crew interaction" className="w-100" />
       </Button>
